@@ -4,12 +4,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
 
 /**
  * Class Book
  *
  * @ORM\Table
  * @ORM\Entity()
+ * @ApiResource()
  * @package App\Entity
  */
 class Book
