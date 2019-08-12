@@ -31,9 +31,15 @@ class Book
     private $title;
 
     /**
+     * @var \DateTimeImmutable
+     * @ORM\Column(type="datetime")
+     */
+    private $registeredAt;
+
+    /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -41,7 +47,7 @@ class Book
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -53,6 +59,25 @@ class Book
     public function setTitle($title)
     {
         $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * @return \DateTimeImmutable
+     */
+    public function getRegisteredAt(): ?\DateTimeImmutable
+    {
+        return $this->registeredAt;
+    }
+
+    /**
+     * @param \DateTimeImmutable $registeredAt
+     * @return Book
+     */
+    public function setRegisteredAt($registeredAt)
+    {
+        $this->registeredAt = $registeredAt;
 
         return $this;
     }
