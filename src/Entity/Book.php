@@ -39,7 +39,7 @@ class Book
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -47,7 +47,7 @@ class Book
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle(): ?string
     {
         return $this->title;
     }
@@ -66,7 +66,7 @@ class Book
     /**
      * @return \DateTimeImmutable
      */
-    public function getRegisteredAt(): \DateTimeImmutable
+    public function getRegisteredAt(): ?\DateTimeImmutable
     {
         return $this->registeredAt;
     }
